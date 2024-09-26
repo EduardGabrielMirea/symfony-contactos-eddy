@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<body>
+<h1>Listado de clientes</h1>
+{% if clientes %}
+    {% for cliente in clientes %}
+        {{ include('partials/datos_clientes.html.twig', {'cliente': cliente}) }}
+    {% endfor %}
+{% else %}
+    <h4>Cliente no encontrado</h4>
+{% endif %}
+</body>
+</html>
