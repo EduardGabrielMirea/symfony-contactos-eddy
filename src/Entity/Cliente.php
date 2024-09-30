@@ -22,6 +22,9 @@ class Cliente
     #[ORM\Column(length: 255)]
     private ?string $coche = null;
 
+    #[ORM\ManyToOne]
+    private ?Provincia $provincia = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Cliente
     public function setCoche(string $coche): self
     {
         $this->coche = $coche;
+
+        return $this;
+    }
+
+    public function getProvincia(): ?Provincia
+    {
+        return $this->provincia;
+    }
+
+    public function setProvincia(?Provincia $provincia): self
+    {
+        $this->provincia = $provincia;
 
         return $this;
     }

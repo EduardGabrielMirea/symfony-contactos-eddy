@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d9f092c-b104-48c4-9d71-49d1c21f393d" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20240930070255.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/nuevo.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/page/cliente.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Cliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/datos_clientes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/datos_clientes.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +227,7 @@
       <workItem from="1727164354794" duration="19000" />
       <workItem from="1727335750690" duration="5216000" />
       <workItem from="1727428588409" duration="2099000" />
-      <workItem from="1727676144774" duration="339000" />
+      <workItem from="1727676144774" duration="5120000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
