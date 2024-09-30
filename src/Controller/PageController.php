@@ -60,7 +60,7 @@ class PageController extends AbstractController
         return $this->render('lista_clientes.html.twig', ['clientes' => $clientes]);
     }
 
-    #[Route('/cliente/update/{id}/{nombre}', name: 'actualizar_cliente')]
+    #[Route('/cliente/update/{id}/{nombre}/{telefono}/{coche}', name: 'actualizar_cliente')]
     public function actualizar(int $id, string $nombre, string $telefono, string $coche ,Cliente $cliente, ManagerRegistry $doctrine ): Response
     {
         $entityManager = $doctrine->getManager();
@@ -68,8 +68,24 @@ class PageController extends AbstractController
         $cliente->setTelefono($telefono);
         $cliente->setCoche($coche);
         $entityManager->persist($cliente);
-        return $this->render('lista_clientes.html.twig', ['cliente' => $cliente]);
+        return $this->render('ficha_cliente.html.twig', ['cliente' => $cliente]);
     }
-
-
+    #[Route('/cliente/delete/{id}', name: 'eliminar_cliente')]
+    public function delete(int $id, Cliente $cliente, ManagerRegistry $doctrine ): Response
+    {
+        $entityManager = $doctrine->getManager();
+        $repositorio = $doctrine->getRepository(Cliente::class);
+        $cliente = $repositorio->find($id);
+        if ($cliente) {
+            try {
+                $entityManager->remove($cliente);
+                $entityManager->flush();
+                return new Response("Cliente eliminado");
+            }catch ( \Exception $e ) {
+                return new Response("Cliente no encontrado");
+            }
+        }else{
+            return $this ->render('ficha_cliente.html.twig', ['cliente' => null]);
+        }
+    }
 }
