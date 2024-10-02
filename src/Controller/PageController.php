@@ -144,4 +144,23 @@ class PageController extends AbstractController
         ));
     }
 
+    #[Route('/cliente/editar/{id}', name: 'editar_cliente')]
+    public function contactEdith(ManagerRegistry $doctrine, Request $request, $id): Response
+    {
+        $entityManager = $doctrine->getManager();
+        $cliente = $entityManager->find(Cliente::class, $id);
+        $form = $this->createForm(ClienteFormType::class, $cliente);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $cliente = $form->getData();
+            $entityManager = $doctrine->getManager();
+            $entityManager->persist($cliente);
+            $entityManager->flush();
+            return $this->redirectToRoute('listar_clientes', [ 'id' => $cliente->getId() ]);
+        }
+        return $this->render('page/cliente.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
 }
