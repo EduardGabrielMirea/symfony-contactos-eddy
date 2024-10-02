@@ -2,26 +2,21 @@
 {{ form_errors(form) }}
 <div class="form-group">
     <div class="col-xs-6">
-        {{ form_row(form.firstName, {'attr': {'class':'form-control'}}) }}
+        {{ form_row(form.nombre, {'attr': {'class':'form-control'}}) }}
     </div>
     <div class="col-xs-6">
-        {{ form_row(form.lastName, {'attr': {'class':'form-control'}}) }}
+        {{ form_row(form.telefono, {'attr': {'class':'form-control'}}) }}
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-xs-12">
+        {{ form_row(form.coche, {'attr': {'class':'form-control'}}) }}
     </div>
 </div>
 <div class="form-group">
     <div class="col-xs-12">
-        {{ form_row(form.email, {'attr': {'class':'form-control'}}) }}
-    </div>
-</div>
-<div class="form-group">
-    <div class="col-xs-12">
-        {{ form_row(form.subject, {'attr': {'class':'form-control'}}) }}
-    </div>
-</div>
-<div class="form-group">
-    <div class="col-xs-12">
-        {{ form_row(form.message, {'attr': {'class':'form-control'}}) }}
-        {{ form_row(form.Send, {'attr': {'class':'pull-right btn btn-lg sr-button'}}) }}
+        {{ form_row(form.enviar, {'attr': {'class':'pull-right btn btn-lg sr-button'}}) }}
     </div>
 </div>
 {{ form_end(form) }}

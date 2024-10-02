@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Cliente;
 use App\Entity\Provincia;
+use App\Form\ClienteFormType;
 use Doctrine\DBAL\Types\TextType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -123,4 +125,23 @@ class PageController extends AbstractController
         $entityManager->flush();
         return $this->render('ficha_cliente.html.twig', ['cliente' => $cliente]);
     }
+
+    #[Route('/cliente/nuevo', name: 'crear_cliente')]
+    public function contact(ManagerRegistry $doctrine, Request $request): Response
+    {
+        $cliente = new Cliente();
+        $form = $this->createForm(ClienteFormType::class, $cliente);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $cliente = $form->getData();
+            $entityManager = $doctrine->getManager();
+            $entityManager->persist($cliente);
+            $entityManager->flush();
+            return $this->redirectToRoute('listar_clientes', [ 'id' => $cliente->getId() ]);
+        }
+        return $this->render('page/cliente.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
 }
