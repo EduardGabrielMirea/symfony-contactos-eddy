@@ -3,12 +3,89 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}Cliente{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .cliente-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        ul li strong {
+            color: #555;
+        }
+
+        .cliente-card li {
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .cliente-card li:last-child {
+            border-bottom: none;
+        }
+
+        h4 {
+            text-align: center;
+            color: #d9534f;
+        }
+
+        /* Botón de volver */
+        .btn-volver {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-volver a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-volver a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 {% block body %}
     <h1>Ficha del cliente</h1>
     {% if cliente %}
-        {{ include('partials/datos_clientes.html.twig', {'cliente': cliente}) }}
+        <div class="cliente-card">
+            {{ include('partials/datos_clientes.html.twig', {'cliente': cliente}) }}
+        </div>
+        <div class="btn-volver">
+            <a href="#">Volver</a>
+        </div>
     {% else %}
         <h4>CLiente no encontrado</h4>
     {% endif %}
