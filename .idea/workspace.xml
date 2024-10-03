@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9f092c-b104-48c4-9d71-49d1c21f393d" name="Changes" comment="first commit">
+    <list default="true" id="8d9f092c-b104-48c4-9d71-49d1c21f393d" name="Changes" comment="editar fromulario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Provincia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Provincia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page/cliente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page/cliente.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +222,7 @@
       <workItem from="1727335750690" duration="5216000" />
       <workItem from="1727428588409" duration="2099000" />
       <workItem from="1727676144774" duration="6207000" />
-      <workItem from="1727868873035" duration="550000" />
+      <workItem from="1727868873035" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -259,7 +256,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727682518981</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fromulario">
+      <option name="closed" value="true" />
+      <created>1727869450946</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727869450946</updated>
+    </task>
+    <task id="LOCAL-00006" summary="editar fromulario">
+      <option name="closed" value="true" />
+      <created>1727869634087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727869634087</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +291,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="fromulario" />
+    <MESSAGE value="editar fromulario" />
+    <option name="LAST_COMMIT_MESSAGE" value="editar fromulario" />
   </component>
 </project>
