@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9f092c-b104-48c4-9d71-49d1c21f393d" name="Changes" comment="Seguridad y control de accesos {Registro-Login-Listar} y añadir botones">
+    <list default="true" id="8d9f092c-b104-48c4-9d71-49d1c21f393d" name="Changes" comment="Seguridad y control de accesos {Registro-Login-Listar-LogOut} y añadir botones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/datos_clientes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/datos_clientes.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +225,7 @@
       <workItem from="1727676144774" duration="6207000" />
       <workItem from="1727868873035" duration="911000" />
       <workItem from="1727939148822" duration="6426000" />
-      <workItem from="1728281126901" duration="6464000" />
+      <workItem from="1728281126901" duration="6909000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -339,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728287427741</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Seguridad y control de accesos {Registro-Login-Listar-LogOut} y añadir botones">
+      <option name="closed" value="true" />
+      <created>1728287661967</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728287661967</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +371,7 @@
     <MESSAGE value="editar css" />
     <MESSAGE value="Seguridad y control de accesos" />
     <MESSAGE value="Seguridad y control de accesos {Registro-Login-Listar} y añadir botones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Seguridad y control de accesos {Registro-Login-Listar} y añadir botones" />
+    <MESSAGE value="Seguridad y control de accesos {Registro-Login-Listar-LogOut} y añadir botones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seguridad y control de accesos {Registro-Login-Listar-LogOut} y añadir botones" />
   </component>
 </project>
