@@ -85,9 +85,42 @@
         .btn-volver a:hover {
             background-color: #218838;
         }
+
+        /* Botón estilizado */
+        .btn-login-register {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-login-register a {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-login-register a:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
+<header>
+    <div class="btn-login-register">
+        {% if app.user %}
+            <!-- Mostrar el email del usuario autenticado -->
+            <p>{{ app.user.email }}</p>
+            <!-- Si el usuario está autenticado, mostramos los botones de Salir y Nuevo -->
+            <p><a href="{{ path('app_logout') }}">Salir</a>  <a href="{{ path('crear_cliente') }}">Nuevo</a></p>
+        {% else %}
+            <!-- Si el usuario NO está autenticado, mostramos los botones de Login y Registro -->
+            <p><a href="{{ path('app_login') }}">Login</a>  <a href="{{ path('app_register') }}">Registro</a></p>
+        {% endif %}
+    </div>
+</header>
 <h1>Listado de clientes</h1>
 {% if clientes %}
     {% for cliente in clientes %}

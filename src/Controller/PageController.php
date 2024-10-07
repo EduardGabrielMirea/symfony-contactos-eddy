@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Cliente;
 use App\Entity\Provincia;
+use App\Entity\User;
 use App\Form\ClienteFormType;
 use Doctrine\DBAL\Types\TextType;
 use Doctrine\Persistence\ManagerRegistry;
