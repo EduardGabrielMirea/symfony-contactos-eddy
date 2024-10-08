@@ -1,5 +1,13 @@
-{{ form_start(form, {'attr': {'class':'form-horizontal'}}) }}
+{% extends 'base.html.twig' %}
+
+{% block title %}Nuevo Cliente{% endblock %}
+
+{% block body %}
+    {% if is_granted('ROLE_ADMIN') %}
+
+    {{ form_start(form, {'attr': {'class':'form-horizontal'}}) }}
 {{ form_errors(form) }}
+
 <div class="form-group">
     <div class="col-xs-6">
         {{ form_row(form.nombre, {'attr': {'class':'form-control'}}) }}
@@ -20,3 +28,11 @@
     </div>
 </div>
 {{ form_end(form) }}
+
+    <div class="btn-volver">
+        <a href="{{ path('listar_clientes') }}">Volver a la lista</a>
+    </div>
+    {% else %}
+        <p>No tienes acceso</p>
+    {% endif %}
+{% endblock %}

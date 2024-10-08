@@ -2,7 +2,7 @@
     <li><a href="{{ path('editar_cliente', { 'id': cliente.id }) }}"><strong>{{ cliente.nombre }}</strong></a></li>
     <li><strong>Teléfono</strong>: {{ cliente.telefono }}</li>
     {% if cliente.provincia %}
-    <li><strong>Provincia: </strong>{{ cliente.provincia.nombre }}</li>
+    <li><strong>Provincia: </strong>{{ cliente.provincia ? cliente.provincia.nombre : ''}}</li>
     {% endif %}
     <li><strong>Coche</strong>: {{ cliente.coche }}</li>
 </ul>
